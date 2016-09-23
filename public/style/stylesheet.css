@@ -1,0 +1,10 @@
+
+input.ng-invalid {
+    background-color:red;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+placeholder.ng-valid{
+  text-decoration-color: black;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app ="myApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="scripts/clientscript.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style/stylesheet.css" media="screen" title="no title">
+    <title>Angular Yay!</title>
+  </head>
+  <body >
+    <div ng-controller = "newStudent">
+      Input Assignment Details -
+
+      <input type="text" ng-model="assignmentNumber" placeholder="Assignment Number" required>
+      <input type="text" ng-model="studentName" placeholder="Studet Name" required>
+      <input type="text" ng-model="studentScore" placeholder="Student Score" required>
+      <input type="text" ng-model="completedDate" placeholder="Date Completed" required>
+
+      <div>
+      <button type="button" ng-click="addNewStudent()"> Add Assignment </button>
+    </div>
+    </div>
+
+    <ul>
+      <li><a href="#home"> Home </a></li>
+      <li><a href="#getAll"> Get all Assignments </a></li>
+    <div ng-view></div>
+
+  </body>
+</html>
