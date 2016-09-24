@@ -27,7 +27,11 @@
     <ul>
       <li><a href="#home"> Home </a></li>
       <li><a href="#getAll"> Get all Assignments </a></li>
-    <div ng-view></div>
+    </ul>
+
+    <p ng-repeat='assignments in allStudents'>
+        {{ assignments.assignment_number }} {{ assignments.studentName }}
+     </p>
 
   </body>
 </html>

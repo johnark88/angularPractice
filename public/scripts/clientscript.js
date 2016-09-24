@@ -6,9 +6,8 @@ var allYourSuperHeros= [];
 
 myApp.controller('newStudent',['$scope', '$http',function($scope,$http){
 console.log('NG');
-
+$scope.allStudents = [];
 $scope.addNewStudent = function(){
-
 var newStudent ={
   assignment_number: $scope.assignmentNumber,
   student_name: $scope.studentName,
@@ -24,6 +23,7 @@ data: newStudent
 }).then(function(response){
   console.log('back from server sir ', response);
 });
+$scope.allStudents.push(newStudent);
 };//end add super hero scope
 
 
