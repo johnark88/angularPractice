@@ -2,7 +2,7 @@ console.log('js');
 
 var myApp = angular.module('myApp', ['ngRoute']);
 
-var allYourSuperHeros= [];
+var allStudents= [];
 
 myApp.controller('newStudent',['$scope', '$http',function($scope,$http){
 console.log('NG');
@@ -24,7 +24,7 @@ data: newStudent
   console.log('back from server sir ', response);
 });
 $scope.allStudents.push(newStudent);
-console.log('allstudents', $scope.allStudents);
+
 };//end add super hero scope
 
 

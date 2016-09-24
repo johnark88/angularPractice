@@ -1,12 +1,7 @@
-<body np-app='myApp'
 <p>
   This is the home screen. Add a new user here.
   Go to Get All to see all assignments.
+  <p ng-repeat='student in allStudents'>
+    Assignment: {{ student.assignment_number }} <br> Student: {{ student.student_name }}
+  </p>
 </p>
-
-<p ng-repeat='student in allStudents'>
-  Assignment: {{ student.assignment_number }},Student: {{ student.student_name }}
-
-
-
-</body>
