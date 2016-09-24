@@ -17,20 +17,12 @@ app.listen('9001', function(){
   console.log("I'm listening on port 9001");
 });//end server spinup
 
-// app.get( '/', function(req,res){
-//   console.log('base url HIT HIT HIT');
-//   res.sendFile( path.resolve('public/index.html'));
-// }); // end base url
-//
-// app.use( express.static('public'));
 
 app.get("/*", function(req,res){
     console.log("Here is the property: ", req.params[0]);
     var file = req.params[0] || "index.html";
-    res.sendFile(path.join(__dirname, "/public/", file));
+    res.sendFile(path.join(__dirname, "../public", file));
 });
-
-
 
 app.get('/all/:id?', function(req,res){
   console.log('req.params ',req.params);
