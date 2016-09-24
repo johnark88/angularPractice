@@ -24,6 +24,7 @@ data: newStudent
   console.log('back from server sir ', response);
 });
 $scope.allStudents.push(newStudent);
+console.log('allstudents', $scope.allStudents);
 };//end add super hero scope
 
 
@@ -34,13 +35,13 @@ myApp.config(['$routeProvider',function ($routeProvider){
   $routeProvider.
   when ("/home",
     {templateUrl: "partials/home.html",
-    controller: "controllers/homeController"
+    controller: "homeController"
   }).
   when ("/getAll",
     {templateUrl: "partials/getAll.html",
     controller: "getAllController"
   }).
   otherwise({
-    redirectTo: "/home"
+    redirectTo: "/"
   });
 }]);

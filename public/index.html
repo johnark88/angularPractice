@@ -21,6 +21,8 @@
 
       <div>
       <button type="button" ng-click="addNewStudent()"> Add Assignment </button>
+      <p ng-repeat='student in allStudents'>
+        Assignment: {{ student.assignment_number }},Student: {{ student.student_name }}
     </div>
     </div>
 
@@ -29,9 +31,7 @@
       <li><a href="#getAll"> Get all Assignments </a></li>
     </ul>
 
-    <p ng-repeat='assignments in allStudents'>
-        {{ assignments.assignment_number }} {{ assignments.studentName }}
-     </p>
+      <div ng-view></div>
 
   </body>
 </html>
